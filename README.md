@@ -1,10 +1,10 @@
-Vending Machine Simulation (C++)
+🛒 Vending Machine Simulation (C++)
 
 A simple, interactive console-based vending machine program written in C++.
 Users can insert money, purchase items, return credit, while the owner can restock and collect earnings.
 
-Features
-User Functions
+📌 Features
+👤 User Functions
 
 View full vending machine inventory (item name, price, quantity).
 
@@ -22,13 +22,13 @@ Items out of stock
 
 Insufficient funds
 
-Owner Functions (Password: admin123)
+🔐 Owner Functions (Password: admin123)
 
 restock — refill all items to full quantity.
 
 collect — withdraw accumulated machine earnings.
 
-Money Handling
+💰 Money Handling
 
 Credit stays in the machine after each purchase.
 
@@ -36,7 +36,7 @@ Machine tracks total earnings separately for the owner.
 
 Change is returned only when the user chooses return.
 
-Internal Structure
+🧩 Internal Structure
 Data Structures
 
 Item — stores name, price, and quantity.
@@ -61,7 +61,7 @@ restock         (owner only)
 collect         (owner only)
 quit
 
-How to Run
+▶️ How to Run
 
 Compile and run with any C++ compiler:
 
@@ -71,7 +71,7 @@ g++ -std=c++11 vending.cpp -o vending
 
 The program will display the machine and wait for user commands.
 
-Example Interaction
+📷 Example Interaction
 === VENDING MACHINE ===
 Code  Item             Price   Qty
 -----------------------------------
@@ -88,7 +88,7 @@ You inserted $2.00
 Dispensing Coca Cola... Enjoy!
 Remaining credit: $0.50
 
-End Message
+🏁 End Message
 
 The machine runs until the user types:
 
