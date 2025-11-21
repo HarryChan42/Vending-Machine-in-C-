@@ -36,4 +36,21 @@ Perfect for beginners learning classes, structs, vectors, input parsing, and enc
 | C1   | Gum          | $0.75  | 8             |
 | C2   | Red Bull     | $2.50  | 3             |
 
-## Commands
+
+## Future Improvements (Work in Progress 🚧)
+
+The project is actively being extended with new features. Here's what's currently in development:
+
+### Version 2.0 – Graphical User Interface (Qt)
+- **desktop GUI** using **Qt Creator**
+  - Grid of item buttons with images, prices, and stock indicators
+  - Digital credit display
+  - money insert
+- Enhanced owner panel:
+  - Login password protection
+  - Collection/Restock Control
+
+**Author:** Hoi Bong Chan
+**Language:** C++  
+**Frameworks:** VScode, C++, Qt creator  
+**Keywords:** vending-machine-simulator, structs, classes, vectors, encapsulation, state-management, command-line, password-protection, inventory-management
