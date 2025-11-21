@@ -94,7 +94,7 @@ public:
         }
     }
 
-    // UPDATED — keeps remaining money as credit after purchase
+    //keeps remaining money as credit after purchase
     bool selectItem(const string& code) {
         Slot* slot = findSlot(code);
         if (!slot) {
@@ -112,13 +112,13 @@ public:
             return false;
         }
 
-        // Dispense item
+        //Dispense item
         cout << "Dispensing " << slot->item.name << "... Enjoy!\n";
         insertedMoney -= slot->item.price;
         slot->item.quantity--;
         totalEarnings += slot->item.price;
 
-        // NEW — do NOT return change, keep as credit
+        //do NOT return change, keep as credit
         cout << "Remaining credit: $" << fixed << setprecision(2) << insertedMoney << "\n";
 
         return true;
