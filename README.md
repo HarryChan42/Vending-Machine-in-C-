@@ -53,7 +53,7 @@ The project is actively being extended with new features. Here's what's currentl
 ## Current Progress
 28th November, 2025
 
-What I did so far:
+## What I did so far:
 - Core Logic Refactored
 
 - Extracted console logic into VendingMachine.h/.cpp
@@ -64,7 +64,7 @@ What I did so far:
 
 GUI Designed in Qt Creator
 
-mainwindow.ui built with:
+##mainwindow.ui built with:
 
 - Inventory table (QTableWidget)
 
@@ -74,7 +74,7 @@ mainwindow.ui built with:
 
 - Owner actions (Restock, Collect)
 
-Controller Implemented
+##Controller Implemented
 
 - Full mainwindow.cpp written with Qt signals/slots
 
@@ -84,30 +84,27 @@ Controller Implemented
 
 - Integrated model ↔ UI interaction
 
-Issues Encountered
-❌ Build & Autogen Errors
+##Issues Encountered
+- Build & Autogen Errors
 
-Compilation produced errors such as:
+- Compilation produced errors such as:
 
-expected expression
+- expected expression
 
-declaration does not declare anything[
+- declaration does not declare anything[
 
 These stem from Qt failing to generate ui_mainwindow.h, often due to a corrupted build directory or misconfigured project regeneration.
 
-Root Cause
 
-Qt autogen files (ui_*.h, moc files) were not recreated, causing valid C++ code to fail to compile.
+## Next Steps
 
-Next Steps
+- ecreate project with a clean CMake/qmake setup
 
-Recreate project with a clean CMake/qmake setup
+- bDelete and regenerate the entire build directory
 
-Delete and regenerate the entire build directory
+- Re-import logic files into a fresh Qt project
 
-Re-import logic files into a fresh Qt project
-
-Continue GUI enhancement (item grid, product images, owner panel)
+- Continue GUI enhancement (item grid, product images, owner panel)
 
 **Author:** Hoi Bong Chan
 **Language:** C++  
