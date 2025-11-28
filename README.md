@@ -50,59 +50,64 @@ The project is actively being extended with new features. Here's what's currentl
   - Login password protection
   - Collection/Restock Control
  
-  Update(Vending Machine with UI)
-  Progress Summary
-✔ Refactored Console Logic
+## Current Progress
+28th November, 2025
 
-The original single-file vending machine program was separated into:
+What I did so far:
+- Core Logic Refactored
 
-VendingMachine.h / .cpp (model)
+- Extracted console logic into VendingMachine.h/.cpp
 
-mainwindow.h / .cpp (controller)
+- Added getSlots() for GUI table access
 
-mainwindow.ui (interface)
+- Preserved all original functionality: insert, purchase, return money, restock, collect earnings
 
-A new method getSlots() was added to expose inventory to the GUI.
+GUI Designed in Qt Creator
 
-Built the GUI Layout
+mainwindow.ui built with:
 
-Designed the interface using Qt Designer with:
+- Inventory table (QTableWidget)
 
-Inventory table
+- Insert / Select controls (QLineEdit, buttons)
 
-Buttons for actions
+- Credit display label
 
-Inputs for amount and item code
+- Owner actions (Restock, Collect)
 
-Live credit display
+Controller Implemented
 
-Implemented GUI Logic
+- Full mainwindow.cpp written with Qt signals/slots
 
-Connected UI elements to vending-machine methods:
+- Table and credit update helpers
 
-Insert money
+- Error handling via QMessageBox
 
-Buy item
+- Integrated model ↔ UI interaction
 
-Return money
+Issues Encountered
+❌ Build & Autogen Errors
 
-Restock & collect earnings
-
-Table and label refresh functions
-
-Compilation Issues Encountered
-
-Despite correct C++ code, the project failed to compile with errors such as:
-
-use of undeclared identifier 'Ui'
+Compilation produced errors such as:
 
 expected expression
 
-declaration does not declare anything
+declaration does not declare anything[
 
-return-statement with no value
+These stem from Qt failing to generate ui_mainwindow.h, often due to a corrupted build directory or misconfigured project regeneration.
 
-These errors appeared inside valid functions and unrelated lines.
+Root Cause
+
+Qt autogen files (ui_*.h, moc files) were not recreated, causing valid C++ code to fail to compile.
+
+Next Steps
+
+Recreate project with a clean CMake/qmake setup
+
+Delete and regenerate the entire build directory
+
+Re-import logic files into a fresh Qt project
+
+Continue GUI enhancement (item grid, product images, owner panel)
 
 **Author:** Hoi Bong Chan
 **Language:** C++  
