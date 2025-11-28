@@ -37,7 +37,7 @@ Perfect for beginners learning classes, structs, vectors, input parsing, and enc
 | C2   | Red Bull     | $2.50  | 3             |
 
 
-## Future Improvements (Work in Progress 🚧)
+## Future Improvements (Work in Progress)
 
 The project is actively being extended with new features. Here's what's currently in development:
 
@@ -49,6 +49,60 @@ The project is actively being extended with new features. Here's what's currentl
 - Enhanced owner panel:
   - Login password protection
   - Collection/Restock Control
+ 
+  Update(Vending Machine with UI)
+  Progress Summary
+✔ Refactored Console Logic
+
+The original single-file vending machine program was separated into:
+
+VendingMachine.h / .cpp (model)
+
+mainwindow.h / .cpp (controller)
+
+mainwindow.ui (interface)
+
+A new method getSlots() was added to expose inventory to the GUI.
+
+Built the GUI Layout
+
+Designed the interface using Qt Designer with:
+
+Inventory table
+
+Buttons for actions
+
+Inputs for amount and item code
+
+Live credit display
+
+Implemented GUI Logic
+
+Connected UI elements to vending-machine methods:
+
+Insert money
+
+Buy item
+
+Return money
+
+Restock & collect earnings
+
+Table and label refresh functions
+
+Compilation Issues Encountered
+
+Despite correct C++ code, the project failed to compile with errors such as:
+
+use of undeclared identifier 'Ui'
+
+expected expression
+
+declaration does not declare anything
+
+return-statement with no value
+
+These errors appeared inside valid functions and unrelated lines.
 
 **Author:** Hoi Bong Chan
 **Language:** C++  
